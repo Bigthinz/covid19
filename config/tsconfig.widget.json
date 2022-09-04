@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowUnreachableCode": false,
+    "emitDeclarationOnly": true,
+    "declarationDir": "../dist/esm",
+    "pretty": true,
+    "skipLibCheck": true,
+    "target": "esnext",
+    "module": "es6",
+    "moduleResolution": "node",
+    "types": [
+      "google.maps",
+      "node"
+    ]
+  },
+  "include": [
+    "../src/widget/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -1,0 +1,11 @@
+node_modules
+*.log
+yarn-debug.log*
+yarn-error.log*
+.cache
+dist
+server
+.env
+fake
+keys.txt
+cx-model

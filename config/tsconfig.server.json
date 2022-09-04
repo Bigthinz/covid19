@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "target": "es2017",
+    "strict": true,
+    "sourceMap": false,
+    "outDir": "../server",
+    "baseUrl": "src",
+    "allowJs": true,
+    "types": [
+        "node"
+    ]
+  },
+  "include": [
+    "../src/app/**/*",
+    "../src/models/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
