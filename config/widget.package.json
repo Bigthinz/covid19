@@ -2,7 +2,7 @@
   "name": "dialogflowcx-chat-widget",
   "description": "A web chat widget web component that interacts with a dialogflow interactions api to detect intents",
   "version": "0.0.1",
-  "author": "Emmanuel Asamoah Botwe",
+  "author": "",
   "license": "Apache License",
   "homepage": "https://github.com/botchway44/covid-vaccine-appointment#readme",
   "repository": {

@@ -28,7 +28,7 @@ export class MongoClientConnection {
 
         console.log("Connecting to Databse ... ")
         return new Promise((resolve, reject) => {
-            MongoClient.connect(this.mongo_url, { useUnifiedTopology: true }, async (
+            MongoClient.connect('mongodb+srv://dave:cainandabel4o@cluster0.yeihc.mongodb.net/appointment?retryWrites=true&w=majority', { useUnifiedTopology: true }, async (
                 err: any,
                 client: any
             ) => {

@@ -51,7 +51,7 @@ chatFrameTemplate.innerHTML = `
       <!-- TODO : REDESIGN SUGGESSTION CHIPS -->
       <section class="chat_button_container">
       <p>
-      Hello 👋🏾,<br> Nana Adwoa here, Click here to chat with me.
+      Hello 👋🏾,<br> Dave here, Click here to chat with me.
       </p>
 
         <button class="chat-toggle-btn" 

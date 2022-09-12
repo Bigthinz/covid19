@@ -7,9 +7,11 @@ import { Dialog } from "./utils/dialog";
 import { Social } from "./utils/social";
 import { MailerService } from "./mailer.service";
 import { HOSPITALS, IHOSPITAL } from "./utils/hospitals";
+const cors = require("cors");
 
 const express = require('express');
 const server = express();
+server.use(cors())
 const path = require("path");
 const bodyParser = require('body-parser');
 // const fs = require('fs')
@@ -80,6 +82,7 @@ server.post('/api/messages', async (req: any, res: any) => {
             const quantity = req.body.sessionInfo.parameters.quantity;
             const dateTime = req.body.sessionInfo.parameters.datetime;
 
+
             // get hospital
             const hospitals: IHOSPITAL[] = await HOSPITALS[location];
             let hospital: IHOSPITAL = hospitals[Math.ceil((Math.random() * (hospitals.length - 1)))];
@@ -110,6 +113,7 @@ server.post('/api/messages', async (req: any, res: any) => {
          * Resends the verification codeto the users email
          */
         else if (tag === "appointment.resend_code") {
+            
 
             const email = req.body.sessionInfo.parameters.email;
             const ver_results = await dialog.verifyEmail(sessionId, email);

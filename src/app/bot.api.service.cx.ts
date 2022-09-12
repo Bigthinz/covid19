@@ -15,6 +15,10 @@ export class BotApiServiceCx {
         *   const location = 'us-central1'
         *   const client = new SessionsClient({apiEndpoint: 'us-central1-dialogflow.googleapis.com'})
         */
+
+        
+
+        //  const location = 'us-central1'
         this.client = new SessionsClient({
             apiEndpoint: 'us-central1-dialogflow.googleapis.com',
             projectId : process.env.DF_PROJECT_ID,
