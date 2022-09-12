@@ -8,4 +8,4 @@ server
 /.env
 fake
 keys.txt
-cx-model
+/cx-model
