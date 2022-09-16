@@ -110,9 +110,9 @@ export class ChatWidgetElement extends HTMLElement {
 
     // create an intentRequest
     this.intentRequest = new IntentRequest(
-      "stanbic-assistant",
+      "grecords-357114",
       "us-central1",
-      agentId,
+      'f3ca579f-4cef-421e-94b1-258c647819f3',
       "en",
       this.sessionId,
       "hello",

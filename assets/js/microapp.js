@@ -165,6 +165,13 @@ function createChatWidget(username, phone) {
     chatWidget.setAttribute("phonenumber", "");
     chatWidget.setAttribute("username", currentNickname);
 
+    //  chatWidget = document.createElement("dialogflowcx-chat-widget");
+    // chatWidget.setAttribute("agent-id", "f3ca579f-4cef-421e-94b1-258c647819f3");
+    // chatWidget.setAttribute("agent-url", "/channels/web");
+    // chatWidget.setAttribute("chat-title", "Vaccine Appointments");
+    // chatWidget.setAttribute("phonenumber", "");
+    // chatWidget.setAttribute("username", currentNickname);
+
     document.body.appendChild(chatWidget);
 
     // Hide loader and pop up chat widget

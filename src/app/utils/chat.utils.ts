@@ -15,7 +15,9 @@ const {struct} = require('pb-util');
 export function parseChat(response: any) {
 
     const chats: IChat[] = [];
-
+    console.log('===============')
+    console.log(response)
+    console.log('===============')
     for (const message of response) {
 
         // If it is a text

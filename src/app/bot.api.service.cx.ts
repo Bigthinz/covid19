@@ -62,6 +62,7 @@ export class BotApiServiceCx {
 
         const [response] = await this.client.detectIntent(request);
 
+        console.log('=============================')
         console.log(`User Query: ${intentRequest?.query}`);
         if(response?.queryResult?.responseMessages){
         for (const message of response?.queryResult?.responseMessages) {

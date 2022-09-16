@@ -14,6 +14,7 @@ const server = express();
 server.use(cors())
 const path = require("path");
 const bodyParser = require('body-parser');
+const  axios = require('axios')
 // const fs = require('fs')
 
 
@@ -50,6 +51,7 @@ server.post('/api/messages', async (req: any, res: any) => {
          * sessions collection and uses that to manage the conversation.
          */
         if (tag === "getstarted") {
+            console.log("|||||||||||||||||||||||||||||||||||||")
             //Create Session
             const results = await dialog.getStarted(sessionId);
 
@@ -90,6 +92,13 @@ server.post('/api/messages', async (req: any, res: any) => {
             // get the hospital
             const appointment = new Appointment(email, location, hospital, quantity, dateTime, dateTime);
             const result = await dialog.createAppointment(appointment, sessionId);
+            // const daveRes = await  axios.post('',{
+            //     email,
+            //     location,
+            //     hospital,
+            //     quantity
+
+            // })
 
             const payload = Social.createAppointment(req, res, result, appointment);
             res.status(200).send(payload);
@@ -170,7 +179,7 @@ server.post('/channels/web', async (req: any, res: any) => {
     const body = req.body as IntentRequest;
 
     let responseMessages;
-
+    console.log('-----------====================------=---------')
     try {
         if (body.sessionId) {
             responseMessages = await botApiServiceCx.detectIntentText(body);
@@ -185,7 +194,7 @@ server.post('/channels/web', async (req: any, res: any) => {
     res.status(200).json(parseChat(responseMessages?.queryResult?.responseMessages));
 });
 
-
+// https://ayoba-vaccine-appointment.herokuapp.com/api/messages
 
 const PORT = process.env.PORT || 9000;
 mongoClient = new MongoClientConnection();
