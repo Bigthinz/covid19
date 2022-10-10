@@ -5,12 +5,19 @@
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 
   <title>COVID vaccination appointment</title>
-  <meta name="description" content="A conversational bot allowing users to book covid vaccine shots appointment at health sectors around them at their own convenience.">
+  <meta name="description"
+    content="A conversational bot allowing users to book covid vaccine shots appointment at health sectors around them at their own convenience.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
 
   <script src="./dist/dialogflowcx-chat-widget.js"></script>
   <script src="./assets/js/ayobastub.js"></script>
@@ -20,58 +27,271 @@
 </head>
 
 <body>
-  <img src="../assets/images/world.jpg" alt="" class="map">
-  <div class="headline">
+  <!-- <img src="../assets/images/world.jpg" alt="" class="map"> -->
+  <!-- <div class="headline">
     <h1>Covid Assistant</h1>
     <h2>Hi I'm Nana Adwoa the smart assistant</h2>
-  </div>
+  </div> -->
   <!-- <div class="login-logo"></div> -->
 
-  <div id="log-container" >
+  <div class="main">
+    <div class="wrap">
+
+      <div class="lf-head">
+        <div class="head-wrap">
+          <h2>Reinventing the way we </h2>
+          <h2>
+            <span class="word wisteria">Connect</span>
+            <span class="word beliza">Telephony</span>
+            <span class="word pomegranate">Respond</span>
+            <span class="word green">Talk</span>
+            <span class="word midnight">Live</span>
+          </h2>
+          <!-- <p>Have a feel of a natural conversation <br> Have a feel of a natural conversation</p> -->
+
+          <!-- <div>
+            <a href="#" class="btn-start">start now</a>
+            <a href="#" class="btn-demo">watch demo</a>
+          </div> -->
+        </div>
+      </div>
+      <div class="rt-head">
+        <div class="img-wrap">
+          <img src="assets/images/banner.png" alt="banner">
+          .
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <div id="log-container">
     <pre id="logger"></pre>
   </div>
 
-      <section id="loading-section">
-        
-        <h4>Starting Nana Adwoa</h4>
-        <div class="lds-ring">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        </section>
-        
-        
-        
-        
-  
+  <section id="loading-section">
+
+    <h4>Starting Nana Adwoa</h4>
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </section>
+
+
+
+
+
   <style>
-    
-    
+    .text {
+      position: absolute;
+      width: 450px;
+      left: 50%;
+      margin-left: -225px;
+      height: 40px;
+      top: 50%;
+      margin-top: -20px;
+      font-size: 40px;
+      color: #fff;
+      z-index: 1;
+    }
+
+    h2 {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .word {
+      position: absolute;
+      width: 220px;
+      opacity: 0;
+    }
+
+    .letter {
+      display: inline-block;
+      position: relative;
+      float: left;
+      transform: translateZ(25px);
+      transform-origin: 50% 50% 25px;
+    }
+
+    .letter.out {
+      transform: rotateX(90deg);
+      transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+
+    .letter.behind {
+      transform: rotateX(-90deg);
+    }
+
+    .letter.in {
+      transform: rotateX(0deg);
+      transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .wisteria {
+      color: #8e44ad;
+    }
+
+    .beliza {
+      color: #947054;
+    }
+
+    .pomegranate {
+      color: #c0392b;
+    }
+
+    .green {
+      color: #16a085;
+    }
+
+    .midnight {
+      color: #ffb228;
+    }
+
+
     * {
       padding: 0px;
       margin: 0px;
     }
-    
-    .show{
+
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+
+
+    .show {
       display: block;
     }
 
-    .hidden{
+    .hidden {
       display: none;
     }
+
+    .main {
+      height: 90vh;
+      /* overflow: hidden; */
+      display: flex;
+      align-items: center;
+
+    }
+
+    .main .wrap {
+      width: 85%;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-gap: 3rem;
+
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+
+    }
+
+    .lf-head {
+      display: grid;
+      align-items: center;
+    }
+
+    .lf-head .head-wrap h2 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #fefefe;
+      margin-bottom: 2rem;
+      width: 40rem;
+    }
+
+    .lf-head .head-wrap p {
+      font-size: 1rem;
+      color: #fefefe;
+      margin-bottom: 4rem;
+      line-height: 24px;
+      width: 25rem;
+    }
+
+
+    .wrap .rt-head .img-wrap {
+      width: 100%;
+      /* height:500px; */
+      /* overflow: hidden; */
+      /* background: url('assets/images/banner.png'); */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    img {
+      width: 100%;
+      transform: translateY(70px);
+    }
+
+
+    a {
+      text-decoration: none;
+      color: #fefefe;
+      padding: 1rem 2rem;
+
+    }
+
+    a.btn-start {
+      background: #E17D7B;
+      box-shadow: 50px 39px 25px rgba(0, 0, 0, 0.01), 28px 22px 21px rgba(0, 0, 0, 0.05), 12px 10px 16px rgba(0, 0, 0, 0.09), 3px 2px 9px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      margin-right: 1rem;
+      transition: all .2s ease-in-out;
+    }
+
+    a.btn-demo {
+      border: 1px solid #E1FFF9;
+      border-radius: 5px;
+    }
+
+    a.btn-demo:hover {
+      background: #E1FFF9;
+      color: #333;
+    }
+
+    a.btn-start:hover {
+      background: #E1FFF9;
+      color: #333;
+    }
+
+
+
+
+
+
+
+
+
+
 
     @keyframes anims {
       0% {
         transform: rotate(0deg);
       }
+
       100% {
         transform: rotate(360deg);
       }
     }
 
-    .map{
+    .map {
       position: absolute;
       top: 2%;
       left: 10%;
@@ -80,113 +300,192 @@
 
       width: 40rem;
     }
-      
-    
 
-    .headline{
+
+
+    .headline {
       position: absolute;
       top: 30%;
       left: 20%;
       transform: translate(-50%, -50%);
       color: #fff;
       font-family: 'Roboto Slab', serif;
-      
+
 
     }
 
 
-    #loading-section{
+    #loading-section {
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
     }
-    
-    #loading-section h4{
+
+    #loading-section h4 {
       color: white;
       font-size: 20px;
       font-family: "Source Sans Pro";
     }
-    #log-container { 
-      background:black; 
+
+    #log-container {
+      background: black;
       overflow-y: scroll;
       overflow-wrap: normal;
-    height:25vh;
-    display: none;
-    flex-direction: column-reverse;
-  }
-  .log-boolean,
-  .log-undefined {color: magenta;}
-  .log-object,
-  .log-string {color: green;}
-  .log-number {color: cyan;}
-  
-  body {
-    width: 100%;
-      height: 100vh;
-      
-      /* background: url("assets/images/back.jpg") center center repeat; */
-      background: #012E72;
+      height: 25vh;
+      display: none;
+      flex-direction: column-reverse;
+    }
 
-      
+    .log-boolean,
+    .log-undefined {
+      color: magenta;
+    }
+
+    .log-object,
+    .log-string {
+      color: green;
+    }
+
+    .log-number {
+      color: cyan;
+    }
+
+    body {
+      width: 100%;
+      height: 100vh;
+
+      /* background: url("assets/images/back.jpg") center center repeat; */
+      background: linear-gradient(147.51deg, #183A7E -8.92%, #204698 94.8%);
+      ;
+
+
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
     }
-    
-    
+
+
     .lds-ring {
       display: inline-block;
       position: relative;
       width: 80px;
       height: 80px;
     }
+
     .lds-ring div {
       box-sizing: border-box;
-  display: block;
-  position: absolute;
-  width: 44px;
-  height: 44px;
-  margin: 8px;
-  border: 5px solid #fff;
-  border-radius: 50%;
-  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: #fff transparent transparent transparent;
-}
-
-.lds-ring div:nth-child(1) {
-  animation-delay: -0.45s;
-}
-.lds-ring div:nth-child(2) {
-  animation-delay: -0.3s;
-}
-.lds-ring div:nth-child(3) {
-  animation-delay: -0.15s;
-}
-@keyframes lds-ring {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-
-
-@media screen and (max-width: 600px) {
-    #log-container {
-      width: 90vw;
-      
+      display: block;
+      position: absolute;
+      width: 44px;
+      height: 44px;
+      margin: 8px;
+      border: 5px solid #fff;
+      border-radius: 50%;
+      animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+      border-color: #fff transparent transparent transparent;
     }
-    #video{
-      width: 90%;
+
+    .lds-ring div:nth-child(1) {
+      animation-delay: -0.45s;
     }
-  }
-  
-  
+
+    .lds-ring div:nth-child(2) {
+      animation-delay: -0.3s;
+    }
+
+    .lds-ring div:nth-child(3) {
+      animation-delay: -0.15s;
+    }
+
+    @keyframes lds-ring {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+
+
+    @media screen and (max-width: 600px) {
+      #log-container {
+        width: 90vw;
+
+      }
+
+      #video {
+        width: 90%;
+      }
+    }
   </style>
+
+
+  <script>
+
+    var words = document.getElementsByClassName('word');
+    var wordArray = [];
+    var currentWord = 0;
+
+    words[currentWord].style.opacity = 1;
+    for (var i = 0; i < words.length; i++) {
+      splitLetters(words[i]);
+    }
+
+    function changeWord() {
+      var cw = wordArray[currentWord];
+      var nw = currentWord == words.length - 1 ? wordArray[0] : wordArray[currentWord + 1];
+      for (var i = 0; i < cw.length; i++) {
+        animateLetterOut(cw, i);
+      }
+
+      for (var i = 0; i < nw.length; i++) {
+        nw[i].className = 'letter behind';
+        nw[0].parentElement.style.opacity = 1;
+        animateLetterIn(nw, i);
+      }
+
+      currentWord = (currentWord == wordArray.length - 1) ? 0 : currentWord + 1;
+    }
+
+    function animateLetterOut(cw, i) {
+      setTimeout(function () {
+        cw[i].className = 'letter out';
+      }, i * 80);
+    }
+
+    function animateLetterIn(nw, i) {
+      setTimeout(function () {
+        nw[i].className = 'letter in';
+      }, 340 + (i * 80));
+    }
+
+    function splitLetters(word) {
+      var content = word.innerHTML;
+      word.innerHTML = '';
+      var letters = [];
+      for (var i = 0; i < content.length; i++) {
+        var letter = document.createElement('span');
+        letter.className = 'letter';
+        letter.innerHTML = content.charAt(i);
+        word.appendChild(letter);
+        letters.push(letter);
+      }
+
+      wordArray.push(letters);
+    }
+
+    changeWord();
+    setInterval(changeWord, 4000);
+
+
+
+
+
+  </script>
 </body>
 
 </html>
