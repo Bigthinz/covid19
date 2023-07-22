@@ -1,11 +1,11 @@
 [build]
-  command = "yarn build"
-  functions = "lambda"
+  command = "npm run build"    # Replace with your build command
+  publish = "dist"            # Replace with the folder containing your built files
 
-# this is actually a Rewrite
-# totally optional, but makes up for
-# a much better UX
+[build.environment]
+  # Add any environment variables needed during build, e.g., NODE_ENV, API_KEY, etc.
+
 [[redirects]]
-  from = "/"
-  to = "/.netlify/functions/index"
+  from = "/*"
+  to = "/index.html"
   status = 200
