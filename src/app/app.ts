@@ -175,7 +175,7 @@ server.post('/api/messages', async (req: any, res: any) => {
  * Entry point to the Interactions API
  */
 server.post('/channels/web', async (req: any, res: any) => {
-
+console.log(req.body)
     const body = req.body as IntentRequest;
 
     let responseMessages;
