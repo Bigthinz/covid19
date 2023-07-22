@@ -1,8 +1,11 @@
-# netlify.yml
+[build]
+  command = "yarn build"
+  functions = "lambda"
 
-build:
-  command: npm run build  
-  publish: dist  
-
-functions:
-  directory: dist
+# this is actually a Rewrite
+# totally optional, but makes up for
+# a much better UX
+[[redirects]]
+  from = "/"
+  to = "/.netlify/functions/index"
+  status = 200
